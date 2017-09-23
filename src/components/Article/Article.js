@@ -23,9 +23,7 @@ export default class Article extends React.PureComponent {
 
         <Time>posted {time}</Time>
 
-        {this.state.loaded
-          ? <Markdown source={this.state.md} />
-          : null}
+        {this.state.loaded && <Markdown source={this.state.md} />}
       </article>
     );
   }
