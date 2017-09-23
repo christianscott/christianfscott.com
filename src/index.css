@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background-color: #F5EBE9;
+  background-color: #f5ebe9;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #343440;
 }
@@ -14,4 +14,3 @@ body {
 *::after {
   box-sizing: inherit;
 }
-

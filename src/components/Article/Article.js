@@ -16,7 +16,7 @@ export default class Article extends React.PureComponent {
 
   render() {
     const { title, time } = this.props;
-    return ( 
+    return (
       <article className="Article">
         <Link to="/">← Go Home</Link>
         <h2>{title}</h2>
@@ -27,4 +27,4 @@ export default class Article extends React.PureComponent {
       </article>
     );
   }
-};
+}
