@@ -1,0 +1,4 @@
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+}
