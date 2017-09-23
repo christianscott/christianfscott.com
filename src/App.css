@@ -1,22 +1,3 @@
-/* Boring init stuff */
-
-html,
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-
-  background-color: #F5EBE9;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  color: #343440;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 /* Page wrapper */
 
 .Page {
