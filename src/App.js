@@ -52,7 +52,7 @@ class App extends Component {
           in the middle of 2018. You can see some of my work on{" "}
           <a href="https://github.com/chrfrasco" rel="external">
             github
-          </a>{" "},
+          </a>,
           find me on <a href="https://www.linkedin.com/in/christian-scott-939a0811a/">linkedin</a>,
           or send me an <a href="mailto:christianfscott@gmail.com">email</a>.
         </p>
