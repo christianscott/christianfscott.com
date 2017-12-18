@@ -37,7 +37,7 @@ const entries = [
 
 const Heading = () => (
   <h1 className="Heading">
-    <span className="Heading--bold">Christian Scott </span>
+    Hello <span className="Heading--bold">Christian Scott </span>
     is a developer and student in Auckland, New Zealand
   </h1>
 );
