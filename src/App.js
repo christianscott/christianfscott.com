@@ -6,6 +6,15 @@ import "./App.css";
 
 const entries = [
   {
+    title: "Checks Downtown",
+    body: "Custom Shopify theme for a clothing store in Auckland",
+    link: "https://checksdowntown.com",
+    linkText: "See the site →",
+    time: "20 Dec 2017 at 12:48",
+    color: "hsl(283, 51%, 86%)",
+    external: true
+  },
+  {
     title: "Postie",
     body: "A postfix calculator written in python",
     link: "/articles/2017/postie",
