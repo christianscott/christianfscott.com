@@ -63,7 +63,7 @@ class App extends Component {
             github
           </a>,
           find me on <a href="https://www.linkedin.com/in/christian-scott-939a0811a/">linkedin</a>,
-          or send me an <a href="mailto:christianfscott@gmail.com">email</a>.
+          or send me an <a href="mailto:christian@christianfscott.com">email</a>.
         </p>
 
         <Switch>
