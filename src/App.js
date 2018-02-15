@@ -52,6 +52,13 @@ const Heading = () => (
 );
 
 class App extends Component {
+  componentDidMount() {
+    // pre-cache all articles
+    Promise.all(entries.map(entry => fetch(entry.mdFile)))
+      .then(() => console.log("Pre-cache succesful"))
+      .catch(e => console.log("Could not pre-cache:", e));
+  }
+
   render() {
     return (
       <div className="Page">
