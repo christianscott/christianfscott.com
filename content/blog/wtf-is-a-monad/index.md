@@ -3,7 +3,7 @@ title: Breaking down "A monad is just a monoid in the category of endofunctors"
 date: "2019-03-11T22:12:03.284Z"
 ---
 
-## What is a monoid?
+## "...just a monoid..."
 
 **Associativity** is a property of some binary operations where the order of operations does not matter, e.g.  since addition is associative,`(a + b) + c = a + (b + c)`
 
@@ -19,7 +19,7 @@ A **monoid** is a **semigroup** with an **identity element**
 
 ∴ monoids make sense
 
-## What is a category?
+## "...in the category..."
 
 A **morphism** is a mapping from some source object A to some target object B
 
@@ -29,7 +29,7 @@ A **category** is a collection of objects linked by **morphisms**, where the mor
 
 ∴ categories make sense
 
-## What is an endofunctor?
+## "...of endofunctors"
 
 A **functor F** is a *structure-preserving* map between categories. That is, given two categories C and D:
 
