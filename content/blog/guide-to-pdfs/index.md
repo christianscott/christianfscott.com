@@ -156,6 +156,8 @@ ET
 endobj
 ```
 
+Let's break this down piece by piece:
+
 `0 0 0 rg`
 
 The `rg` function in the first line of the body sets the color of the text. PDFs use what's known as the rg color system. It's essentially the same as rgb, but scaled 0 - 1. To convert, just divide each rgb value by 360
@@ -170,15 +172,17 @@ So in the above example, we are setting the color to black.
 
 `/F1 16 Tf`
 
-If you go back to the template, you'll see `/F1` inside object 3 just before we specify the font, which is Arial in this case. The `Tf` command sets the font & the font size — so we're specifying 16 point Arial.
+If you go back to the template, you'll see `/F1` inside object 3 just before we specify the font. The `Tf` command sets the font & the font size — so we're specifying 16 point Arial.
 
 `0 0 Td`
 
-This specifies the location at which we wish to render the text. Again, the origin of the coordinate system in PDFs is the _lower left hand corner_, in contrast with most systems that I'm used to. This means that we're going to draw the text in the lower left hand corner of the page.
+This specifies the location to render the text. Again, the origin of the coordinate system in PDFs is the _lower left hand corner_, in contrast with most systems that you'll be used to. This means that we're going to draw the text in the lower left hand corner of the page.
 
 `(Hello, world!) Tj`
 
 Finally, this is what actually renders the text. Instead of using quotes to represent strings, PDFs use parentheses. Don't ask me why.
+
+`<< /Length 57 >>`
 
 ```typescript
 const stream = `BT 0 0 0 rg /F1 16 Tf 0 0 Td (Hello, world!) Tj ET`;
@@ -186,3 +190,5 @@ console.log(Buffer.from(stream).length); // 57
 ```
 
 So our above example is 57 bytes — hence the length declaration.
+
+
