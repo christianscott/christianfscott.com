@@ -42,6 +42,9 @@ This is why we got 2 as the length of `Buffer.from('é')`, internally, in a utf8
 [ 'b11000011', 'b10101001' ]
 ```
 
+This works as we'd expect a utf8 string to behave, despite the fact that Javascript stores strings using the utf16 encoding. This is because `Buffer.from` takes
+an encoding as a second argument, the default value for which is utf8, so the string is parsed as though it were a utf8 string. I'll be honest, I still don't
+really have my head wrapped around how this works, but onwards we go.
 
 With utf8 we have four bytes with 8 bits each, which is $2^{32} = 4,294,967,296$ (4.3 billion) So, end of story right? Surely this is enough room for every single character humans could conceive for the rest of history? Not quite. Look at this nonsense:
 
