@@ -1,5 +1,6 @@
 import Typography from "typography"
 import Github from "typography-theme-github"
+import "typeface-karla";
 
 Github.overrideThemeStyles = () => {
   return {
@@ -14,7 +15,11 @@ Github.overrideThemeStyles = () => {
 
 delete Github.googleFonts
 
-const typography = new Typography(Github)
+const typography = new Typography({
+  ...Github,
+  headerFontFamily: ["karla"],
+  bodyFontFamily: ["karla"],
+})
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
