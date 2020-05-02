@@ -61,12 +61,12 @@ seen = set()
 groups = 0
 
 for n in range(N):
-	if n in seen:
-		continue
-	
-	seen_on_this_walk = relationships.walk(n)
-	seen.update(seen_on_this_walk)
-	groups += 1
+  if n in seen:
+    continue
+  
+  seen_on_this_walk = relationships.walk(n)
+  seen.update(seen_on_this_walk)
+  groups += 1
 ```
 
 ## How do we estimate?
