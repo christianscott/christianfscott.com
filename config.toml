@@ -3,7 +3,7 @@ languageCode = "en-au"
 title = "Christian Scott"
 googleAnalytics = "UA-106948574-1"
 [permalinks]
-  posts = "/:title"
+  blog = "/:filename"
 [params]
   description = "software engineer in sydney, australia"
 [markup]
