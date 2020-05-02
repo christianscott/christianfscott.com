@@ -214,7 +214,10 @@ function autorun(observer) {
 }
 
 function shallow(source) {
-  if (source.__proto__ != null) {
+  if (
+    source.__proto__ != null
+    || source.__proto__ === Object.prototype
+  ) {
     throw new Error(
       'can\'t make an observer from an object with a prototype',
     )
