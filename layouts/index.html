@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <h1>{{ .Site.Title }}</h1>
+
+  <p class="intro">I work as a frontend infrastructure engineer at <a href="https://canva.com">Canva</a> in Sydney, Australia. You can see some of my work on <a href="https://github.com/christianscott">github</a>, find me on <a href="https://www.linkedin.com/in/christian-scott-939a0811a/">linkedin</a>, or send me an <a href="mailto:hello@christianfscott.com">email</a>.</p>
+
+  <h2>Posts</h2>
+
+  {{- $pages := .Site.RegularPages -}}
+  {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+  {{ range sort .Paginator.Pages }}
+  <article>
+    <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
+    <h3 class="subtitle">{{ .Date.Format "January 2, 2006" }}</h2>
+    <div>
+      {{ .Summary | plainify | safeHTML }}
+      {{ if .Truncated }}
+      <a href="{{ .Permalink }}">Read more</a>
+      {{ end }}
+    </div>
+  </article>
+  {{ end }}
+{{ end }}
