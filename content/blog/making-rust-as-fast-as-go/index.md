@@ -24,7 +24,7 @@ Even with the playing field levelled, go still outperformed rust by 50%. For the
 
 This was bizarre. As far as I could tell, these programs were identical besides the fact that the go runtime needs to spend precious cycles collecting garbage. That means it should be slower, right?
 
-I took the question to my coworkers, who had some good suggestions. Theories included theories included [escape analysis](https://en.wikipedia.org/wiki/Escape_analysis), string allocation, and the rust implementation being wrong. The last one was true but the performance gap remained once I fixed it (I have tests now!).
+I took the question to my coworkers, who had some good suggestions. Theories included [escape analysis](https://en.wikipedia.org/wiki/Escape_analysis), string allocation, and the rust implementation being wrong. The last one was true but the performance gap remained once I fixed it (I have tests now!).
 
 The winning suggestion ended up being to switch the allocator in the rust program to `jemalloc`. This was the default allocator used by rust binaries in the past, but it was [removed in favour of using the system allocator instead in late 2018](https://github.com/rust-lang/rust/pull/55238). Read [#36963](https://github.com/rust-lang/rust/issues/36963) to get the full rationale for this change.
 
