@@ -45,7 +45,7 @@ This made a huge difference. On my machine, this dropped the execution time from
 ![Flamegraph after allocator was changed to jemalloc. Time spent allocating dropped to 20%](https://paper-attachments.dropbox.com/s_37D0C8C70724613891307BCE6762349294204ED734B7440F48079DCC0DD663E4_1588496091216_Screenshot+2020-05-03+18.45.57.png)
 
 
-This means that the time spend allocating has dropped from about 40% to 20%. Keep in mind this is for the full benchmark, including setup, but it gives us a good sense of what changed.
+This means that the time spend allocating has dropped from about 40% to 20%. Keep in mind this is for the full benchmark, including all the setup code, but it gives us a good sense of what changed.
 
 I’m not sure why the change was so severe. I tried searching for things like “macos allocator slow” but didn’t find anything. If you have some information here, please let me know!
 
