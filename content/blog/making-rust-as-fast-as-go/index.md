@@ -10,7 +10,7 @@ Let’s take an example that I stumbled across while playing around with an algo
 To my surprise, the go version was faster than the rust version. A lot faster. My initial reaction was that I must have implemented the rust version incorrectly. Maybe I was doing some unsafe (but fast) things in go that rust wouldn’t let me do. To account for this, I laid out some ground rules:
 
 1. The more idiomatic the better. Rust, for example, promises zero cost abstractions so we should lean on this & write safe code
-2. No stack allocated global variables. This means that containers need to be heap allocated & dynamically sized. We don’t know how big the inputs will be!
+2. No static global variables. This means that containers need to be heap allocated & dynamically sized. We don’t know how big the inputs will be!
 3. Memory access should be safe. Don’t eliminate bounds checks
 4. Assume that text is utf8 encoded
 
