@@ -2,6 +2,7 @@ baseURL = "https://christianfscott.com/"
 languageCode = "en-au"
 title = "Christian Scott"
 googleAnalytics = "UA-106948574-1"
+enableRobotsTXT = true
 [permalinks]
   blog = "/:filename"
 [params]
