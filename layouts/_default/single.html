@@ -1,11 +1,15 @@
 {{- partial "head.html" . -}}
 
 <div class="content">
-  <p><a href="/">{{ .Site.Title }}</a></p>
+  <nav><p><a href="/">← Back</a></p></nav>
 
   <article>
     <h1>{{ .Title }}</h1>
-    <h3 class="subtitle">{{ .Date.Format "January 2, 2006" }}</h2>
+    <h2 class="subtitle">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+    </h2>
     {{ .Content }}
   </article>
 </div>

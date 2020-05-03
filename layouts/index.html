@@ -10,7 +10,11 @@
   {{ range sort .Paginator.Pages }}
   <article>
     <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} ::Draft{{ end }}</h1>
-    <h3 class="subtitle">{{ .Date.Format "January 2, 2006" }}</h2>
+    <h3 class="subtitle">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+    </h3>
     <div>
       {{ .Summary | plainify | safeHTML }}
       {{ if .Truncated }}
