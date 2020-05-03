@@ -5,6 +5,8 @@ date: "2020-05-03T07:28:52.529Z"
 
 _**Update:** as some keen HN commenters have pointed out, it looks like the rust program is not actually equivalent to the go program. The go program parses the string once, while the rust program parses it repeatedly inside every loop. It's quite late in Sydney as I write this so I'm not up for a fix right now, but this post is probably Fake News. The perf gains from jemalloc are real, but it's likely not the allocators fault._
 
+_The one-two combo of 1) better performance on linux & 2) jemalloc seeming to fix the issue lured me into believing that the allocator was to blame. I'm not sure what the lesson here is – [perhaps more proof of Cunningham's law?](https://en.wikipedia.org/wiki/Ward_Cunningham#Cunningham's_Law)_
+
 Go is garbage collected, rust is not. That means rust is faster than go, right? No! Not always.
 
 Let’s take an example that I stumbled across while playing around with an algorithm that calculates Levenshtein edit distances. I wanted to compare the performance of the same algorithm in a bunch of different languages. Two of these languages were rust and go.
