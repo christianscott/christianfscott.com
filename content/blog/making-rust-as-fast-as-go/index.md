@@ -56,7 +56,7 @@ So the answer is:
 1. The macos allocator is slow
 2. Go uses a custom allocator, which is faster than the one that ships with macos
 
-There’s still a small performance gap to explain. My curiosity is pretty much satisfied, but if yours isn’t and you figure out the answer please let me know.
+What's the lesson here? If you're writing a rust program that does a lot of allocation, consider using a non-system allocator if you need some more performance. Don't make the mistake of extrapolating beyond that simple point, though. This is a "microbenchmark", and the results are tightly coupled to the very contrived scenario I've concocted.
 
 [Check out the whole github repo.](https://github.com/christianscott/levenshtein-distance-benchmarks) It has implementations in several languages, as well as scripts to benchmark + test them. 
 [](https://github.com/christianscott/levenshtein-distance-benchmarks)
