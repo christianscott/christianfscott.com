@@ -49,7 +49,7 @@ This means that the time spend allocating has dropped from about 40% to 20%. Kee
 
 I’m not sure why the change was so severe. I tried searching for things like “macos allocator slow” but didn’t find anything. If you have some information here, please let me know!
 
-Why doesn’t go suffer from the slow system allocator on macos? [Because go uses a custom allocator.](https://golang.org/src/runtime/malloc.go)
+Why doesn’t go suffer from the slow system allocator on macos? Two things come to mind. The first is that [go uses a custom allocator](https://golang.org/src/runtime/malloc.go). I assume that this is also faster than the macos system allocator. The second is that while this program does spend a lot of time allocating and freeing memory, there are barely any objects in the heap at any given moment. `EditDistance` only allocates one object on the heap (`cache`), meaning that the time spent garbage collecting is probably negligible.
 
 So the answer is:
 
