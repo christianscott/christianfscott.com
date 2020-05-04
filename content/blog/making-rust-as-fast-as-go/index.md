@@ -44,9 +44,9 @@ static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
 This made a huge difference. On my machine, this dropped the execution time from 3 seconds to about 1.8 seconds. Let’s take a look at the flamegraphs (generated with [flamegraph-rs/flamegraph](https://github.com/flamegraph-rs/flamegraph)) to see the change:
 
 
-![Flamegraph before, with system allocator. Roughly 40% of execution time spent allocating](https://paper-attachments.dropbox.com/s_37D0C8C70724613891307BCE6762349294204ED734B7440F48079DCC0DD663E4_1588496091226_Screenshot+2020-05-03+18.48.43.png)
+![Flamegraph before, with system allocator. Roughly 40% of execution time spent allocating](before.png)
 
-![Flamegraph after allocator was changed to jemalloc. Time spent allocating dropped to 20%](https://paper-attachments.dropbox.com/s_37D0C8C70724613891307BCE6762349294204ED734B7440F48079DCC0DD663E4_1588496091216_Screenshot+2020-05-03+18.45.57.png)
+![Flamegraph after allocator was changed to jemalloc. Time spent allocating dropped to 20%](after.png)
 
 
 This means that the time spend allocating has dropped from about 40% to 20%. Keep in mind this is for the full benchmark, including all the setup code, but it gives us a good sense of what changed.
