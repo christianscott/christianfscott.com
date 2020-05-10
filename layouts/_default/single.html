@@ -1,7 +1,13 @@
 {{- partial "head.html" . -}}
 
 <div class="content">
-  <nav><p><a href="/">← Back</a></p></nav>
+  <nav>
+    <ul class="social-links">
+      <li><span><a href="/">← back</a> | </span></li>
+      <li><span><a href="https://github.com/christianscott">github</a> | </span></li>
+      <li><span><a href="https://twitter.com/christianfscott">twitter</a></span></li>
+    </ul>
+  </nav>
 
   <article>
     <h1>{{ .Title }}</h1>
