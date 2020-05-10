@@ -7,6 +7,8 @@ _**Update:** as some keen HN commenters have pointed out, it looks like the rust
 
 _The one-two combo of 1) better performance on linux & 2) jemalloc seeming to fix the issue lured me into believing that the allocator was to blame. I'm not sure what the lesson here is – [perhaps more proof of Cunningham's law?](https://en.wikipedia.org/wiki/Ward_Cunningham#Cunningham's_Law)_
 
+> Read the discussion on [Hacker News](https://news.ycombinator.com/item?id=23058147)
+
 Go is garbage collected, rust is not. That means rust is faster than go, right? No! Not always.
 
 Let’s take an example that I stumbled across while playing around with an algorithm that calculates Levenshtein edit distances. I wanted to compare the performance of the same algorithm in a bunch of different languages. Two of these languages were rust and go.
@@ -62,5 +64,5 @@ So the answer is:
 
 What's the lesson here? If you're writing a rust program that does a lot of allocation, consider using a non-system allocator if you need some more performance. Don't make the mistake of extrapolating beyond that simple point, though. This is a "microbenchmark", and the results are tightly coupled to the very contrived scenario I've concocted.
 
-[Check out the whole github repo.](https://github.com/christianscott/levenshtein-distance-benchmarks) It has implementations in several languages, as well as scripts to benchmark + test them. 
+[Check out the whole github repo.](https://github.com/christianscott/levenshtein-distance-benchmarks) It has implementations in several languages, as well as scripts to benchmark + test them.
 [](https://github.com/christianscott/levenshtein-distance-benchmarks)
