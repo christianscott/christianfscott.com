@@ -1,9 +1,11 @@
 ---
-title: What’s the difference between a Unicode Code Point and a Unicode Scalar Value?
+title: What’s the difference between a Rust char and a Go rune?
 date: "2020-05-10T05:44:50.426Z"
 ---
 
-There’s another question that motivates this question – what’s the difference between a rust `char` and a go `rune`? The answer is that a [`char` is a Unicode Scalar Value](https://doc.rust-lang.org/std/primitive.str.html#method.chars), whereas a [`rune` is a Unicode Code Point](https://blog.golang.org/strings#TOC_5.). That is… not very helpful. What’s the difference between *those* things?
+Rust and Go have similar ways of dealing with UTF-8 encoded text. Rust gives you the `.chars()` method on strings, which returns a sequence of `char`s (no surprise). Go on the other hand gives you `[]rune(str)`, which returns a slice of `rune`s. What's the difference between these two things?
+
+The answer is that a [`char` is a Unicode Scalar Value](https://doc.rust-lang.org/std/primitive.str.html#method.chars), whereas a [`rune` is a Unicode Code Point](https://blog.golang.org/strings#TOC_5.). That is… not very helpful. What’s the difference between *those* things?
 
 A crappy but correct answer to this question is [“a unicode scalar value is any unicode code point except high surrogate and low surrogate code points”](https://www.unicode.org/glossary/#unicode_scalar_value). Ugh. You need a fair bit of context to understand this, so I will do my best to explain it from the beginning.
 
