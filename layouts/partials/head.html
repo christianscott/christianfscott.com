@@ -85,6 +85,21 @@
     .social-links li {
       display: inline;
     }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table td,
+    table th {
+      text-align: center;
+      border: thin dashed #333;
+    }
+    table th {
+      background-color: #333;
+      color: white;
+      border: thin solid #333;
+    }
   </style>
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
