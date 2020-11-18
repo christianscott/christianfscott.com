@@ -1,5 +1,5 @@
 ---
-title: Permission to suck
+title: Permission to ship products that suck
 date: "2020-11-18T09:18:20.445Z"
 ---
 
