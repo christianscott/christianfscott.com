@@ -22,7 +22,7 @@ With all that in mind, here's the updated but far less snappy "saying":
 To decide if a problem is worth solving prematurely (that is, before the problem has arisen), first consider:
 1) the cost of solving the problem now
 2) the cost of solving the problem at the time it would arise 
-3) the size of the fallout of the problem if it becomes un-solveable
+3) the size of the fallout if the problem is not solved
 
 | cost now  | cost later  | potential fallout  | solve when?     |
 |-----------|-------------|--------------------|-------------|
