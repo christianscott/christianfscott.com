@@ -3,9 +3,9 @@ title: Permission to suck
 date: "2020-11-18T09:18:20.445Z"
 ---
 
-Teams who build products for their coworkers, internal teams, face a critical problem. Their users are unable to switch from their product to another one. This becomes problematic when the product that the internal team builds sucks. Even if there is a third party who sells something better, there is often no way for them to switch to that product. This gives internal teams permission to suck.
+Teams who build products for their coworkers, internal teams, face a critical problem. Their users are unable to switch from their product to another one. This becomes problematic when the product that the internal team builds sucks. Even if there is a third party who sells something better, there is often no way for them to switch to that product. This gives internal teams permission to ship products that suck.
 
-If these internal teams were companies, there would be little room to suck. Users would flee, and the company will go out of business.
+If these internal teams were companies, there would be little room to suck. Users would flee, and the company would go out of business.
 
 Some might see this as an advantage for the internal team. 100% retention is something that even the best products can only dream of! This might be the case if all you care about is keeping your job. If your users can't leave, then you're never out of a job. But what about the long term health of the company? Without a healthy company, there is no internal team. Bad internal tools will rot a company from the inside out. Your users will do less work, leave the company, work around you, et cetera. This in turn rots The Thing That Actually Makes Money
 
