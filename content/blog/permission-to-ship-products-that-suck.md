@@ -3,7 +3,9 @@ title: Permission to ship products that suck
 date: "2020-11-18T09:18:20.445Z"
 ---
 
-Teams who build products for their coworkers, internal teams, face a critical problem. Their users are unable to switch from their product to another one. This becomes problematic when the product that the internal team builds sucks. Even if there is a third party who sells something better, there is often no way for them to switch to that product. This gives internal teams permission to ship products that suck.
+_Originally published as an internal blog post._
+
+Teams who build products for their coworkers (a.k.a. internal teams) face a critical problem. Their users are unable to switch from their product to another one. This becomes problematic when the product that the internal team builds is not very good. Even if there is a third party who sells something better, there is often no way for them to switch to that product. This gives internal teams permission to ship products that suck.
 
 If these internal teams were companies, there would be little room to suck. Users would flee, and the company would go out of business.
 
@@ -13,10 +15,10 @@ Except for negligence or bad luck, there's no reason a 3rd party product could d
 
 To recap, there are two sides of the coin here:
 
-1. From the perspective of the user: I can pick the tool that best suits my needs
-2. From the perspective of the builder: our tool must be the best, otherwise users will pick a different tool
+1. **From the perspective of the user:** I can pick the tool that best suits my needs
+2. **From the perspective of the builder:** our tool must be the best, otherwise users will pick a different tool
 
-These both result, on average and over time, with the users selecting the best tools. This allocates more capital to those tools, which use that extra cash to become even better (and are then swiftly punished for their success by anti-trust regulation).
+These both result, on average and over time, with the users selecting the best products. This allocates more capital to those tools, which use that extra cash to become even better[^1].
 
 It might seem like this is the best possible outcome, but it's not. [Vertical integration](https://www.investopedia.com/terms/v/verticalintegration.asp) is a strategy whereby you incorporate e.g. a supplier into your business. This incorporation allows you to reduce costs & improve efficiency. A recent example is Apple in-housing the manufacturing of processors. I don't have a lot of insight here but it's plain to see that the 1-2 combo of cost reduction & the ability to tailor the product to their needs will be a winning one.
 
@@ -28,3 +30,5 @@ I don't have a good answer, but I have a few ideas:
 
 1. Sell or open source your product. If it performs well on the market, you've got confirmation that you have a winner on your hands. This is allegedly why Bazel (a.k.a. Blaze) was open sourced.
 2. Don't force teams to use internal tools. If they want to use Datadog rather than your crappy internal clone, let them!
+
+[^1]: and are then swiftly punished for their success by anti-trust regulation
