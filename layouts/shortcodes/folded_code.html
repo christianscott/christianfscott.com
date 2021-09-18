@@ -1,6 +1,0 @@
-<details style="margin-bottom: 1rem;">
-  {{ $filename := .Get "filename" }}
-  <summary><code>{{ path.Base $filename }}</code></summary>
-  {{ $contents := readFile $filename }}
-  {{ highlight $contents (path.Ext $filename) "" }}
-</details>

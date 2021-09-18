@@ -1,0 +1,135 @@
+<html lang="en-au">
+  <head>
+    <meta name=generator content="Hugo 0.69.2">
+    <meta charset=utf-8>
+    <link rel=canonical href=https://www.christianfscott.com/>
+    <title>Christian Scott</title>
+    <meta name=description content="software engineer in sydney, australia">
+    <meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <link rel=alternate type=application/rss+xml href=https://www.christianfscott.com/index.xml title="Christian Scott">
+    <style>
+    .html, body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
+        font-size: 18px;
+        line-height:1.4
+    }
+
+    .content {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 1.2rem;
+        overflow:hidden
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        font-weight: 500
+    }
+
+    .intro {
+        margin-bottom:2.4rem
+    }
+
+    a {
+        color:blue
+    }
+
+    .nav-item {
+      color: unset;
+    }
+
+    .nav-item:not(:first-child) {
+      padding-left: 0.4rem;
+    }
+
+
+    .highlight {
+        overflow-x: scroll;
+        font-size:1rem
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width:100%
+    }
+
+    blockquote {
+        border-left: 2px solid #d3d3d3;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem;
+        font-style: italic;
+        color:#333
+    }
+
+    ol {
+        padding-inline-start:1.4rem
+    }
+
+    :focus {
+        outline:rgba(0, 0, 255, .3)solid 2px
+    }
+
+    figure {
+        margin:0
+    }
+
+    figcaption {
+        font-size: 1rem;
+        color:#333
+    }
+
+    table {
+        width: 100%;
+        border-collapse:collapse
+    }
+
+    table td, table th {
+        text-align: center;
+        border:thin dashed #333
+    }
+
+    table th {
+        background-color: #333;
+        color: #fff;
+        border: thin solid #333
+    }
+    </style>
+    <meta property="og:title" content="Christian Scott">
+    <meta property="og:description" content="software engineer in sydney, australia">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.christianfscott.com/">
+    <meta property="og:image" content="https://www.christianfscott.com/logo.png">
+    <meta property="og:updated_time" content="2020-07-20T14:38:57+00:00">
+    <meta name=twitter:card content="summary_large_image">
+    <meta name=twitter:image content="https://www.christianfscott.com/logo.png">
+    <meta name=twitter:title content="Christian Scott">
+    <meta name=twitter:description content="software engineer in sydney, australia">
+  </head>
+  <body>
+    <main class="content">
+      <nav>
+        <a href="/" class="nav-item">Christian Scott</a>
+        <a href="https://twitter.com/christianfscott" class="nav-item">twitter</a>
+        <a href="https://github.com/christianscott" class="nav-item">github</a>
+        <a href="mailto:hello@christianfscott.com" class="nav-item">email me</a>
+      </nav>
+
+      ${ if(isindex) }
+      ${ else }
+        <h1>${title}</h1>
+      ${ endif }
+
+      <h2 class="subtitle">
+        <time datetime="${date}">
+          ${date}
+        </time>
+      </h2>
+
+      ${body}
+    </main>
+  </body>
+</html>
