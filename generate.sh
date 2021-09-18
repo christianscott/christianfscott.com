@@ -1,6 +1,3 @@
-#! /usr/bin/env nix-shell
-#! nix-shell -i bash --pure default.nix
-
 md_to_html() {
   local input="$1"
   pandoc \
