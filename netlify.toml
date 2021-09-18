@@ -1,0 +1,3 @@
+[build]
+  command = "./generate.sh"
+  publish = "out/"
