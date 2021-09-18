@@ -79,7 +79,7 @@ clean() {
 }
 
 main() {
-  rm -rf out/*
+  rm -rf out/
   mkdir -p out/
 
   generate_posts
