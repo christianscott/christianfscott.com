@@ -25,16 +25,25 @@
 
     .subtitle {
         font-size: 1rem;
-        font-weight:500
+        font-weight: 500
     }
 
     .intro {
         margin-bottom:2.4rem
     }
 
-    a, a:visited {
+    a {
         color:blue
     }
+
+    .nav-item {
+      color: unset;
+    }
+
+    .nav-item:not(:first-child) {
+      padding-left: 0.4rem;
+    }
+
 
     .highlight {
         overflow-x: scroll;
@@ -73,15 +82,6 @@
         color:#333
     }
 
-    .social-links {
-        list-style: none;
-        padding:0
-    }
-
-    .social-links li {
-        display:inline
-    }
-
     table {
         width: 100%;
         border-collapse:collapse
@@ -111,8 +111,24 @@
   </head>
   <body>
     <main class="content">
-      <h1>${title}</h1>
-      <h2 class="subtitle">${date}</h2>
+      <nav>
+        <a href="/" class="nav-item">Christian Scott</a>
+        <a href="https://twitter.com/christianfscott" class="nav-item">twitter</a>
+        <a href="https://github.com/christianscott" class="nav-item">github</a>
+        <a href="mailto:hello@christianfscott.com" class="nav-item">email me</a>
+      </nav>
+
+      ${ if(isindex) }
+      ${ else }
+        <h1>${title}</h1>
+      ${ endif }
+
+      <h2 class="subtitle">
+        <time datetime="${date}">
+          ${date}
+        </time>
+      </h2>
+
       ${body}
     </main>
   </body>

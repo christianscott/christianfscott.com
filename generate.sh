@@ -24,11 +24,30 @@ generate_post() {
   echo "Generated ${post_name} 🚀"
 }
 
+generate_posts() {
+  for post in posts/*
+  do
+    # use `&` to run each in parallel
+    generate_post "${post}" &
+  done
+
+  local failed=0
+  for job in `jobs -p`
+  do
+    wait "${job}" || failed=1
+  done
+
+  # wait for all subprocesses
+  wait < <(jobs -p)
+}
+
 generate_index() {
   {
     echo "---"
     echo "title: Christian Scott"
+    echo "isindex: true"
     echo "---"
+    echo
 
     {
       for post in posts/*
@@ -47,33 +66,28 @@ generate_index() {
   } > out/index.md
 
   md_to_html out/index.md > out/index.html
-  rm out/index.md
 
   echo "Generated index 🚀"
+}
+
+clean() {
+  for name in "$@"
+  do
+    # fuck around and...
+    find out/ -name "${name}" -exec rm {} \;
+  done
 }
 
 main() {
   rm -rf out/*
   mkdir -p out/
 
-  local post
-  for post in posts/*
-  do
-    generate_post "${post}" &
-  done
-
-  local failed=0
-  for job in `jobs -p`
-  do
-    wait "${job}" || failed=1
-  done
-
-  # wait for all subprocesses
-  wait < <(jobs -p)
-
+  generate_posts
   generate_index
 
   cp static/* out/
+
+  clean metadata.json '*.md'
 }
 
 main "$@"
