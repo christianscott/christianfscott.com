@@ -1,7 +1,6 @@
 ---
 title: Breaking down "A monad is just a monoid in the category of endofunctors"
 date: "2019-03-11T22:12:03.284Z"
-math: true
 ---
 
 ## "...just a monoid..."
@@ -37,9 +36,7 @@ A **functor F** is a *structure-preserving* map between categories. That is, giv
 - it associates each **object** X in c to an **object** F(X) in D
 - it associates each **morphism `g: X → Y`** in C to a **morphism `F(g): F(X) → F(Y)` in D** such that
 
-    $$F(id_X) = id_{F(X)}, \space \forall X \in C$$
-
-    $$F(g \circ h) = F(g) \circ F(h), \space \forall g:X \rightarrow Y \in C, \space \forall h: Y \rightarrow Z \in C$$
+![](equation.png)
 
 An **endofunctor** is a **functor** that maps a **category** to the same category
 

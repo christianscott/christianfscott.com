@@ -2,6 +2,6 @@
 
 with nixpkgs;
 stdenv.mkDerivation {
-	buildInputs = [ pandoc ];
+	buildInputs = [ jq pandoc ];
 	name = "christianfscott.com";
 }
