@@ -34,7 +34,7 @@ def post_page(post_md):
     native.genrule(
         name = "{post}-html".format(post = post_name),
         srcs = [post_md, "post.tmpl"],
-        outs = ["{post}/post_md.html".format(post = post_name)],
+        outs = ["{post}/index.html".format(post = post_name)],
         cmd = " ".join([
             "pandoc",
             "--from markdown",
