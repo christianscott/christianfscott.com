@@ -1,7 +1,8 @@
 { nixpkgs ? import <nixpkgs> {} }:
 
 with nixpkgs;
+
 stdenv.mkDerivation {
-	buildInputs = [ jq pandoc ];
+	buildInputs = [ bazelisk jq pandoc ];
 	name = "christianfscott.com";
 }
