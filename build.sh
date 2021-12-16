@@ -12,6 +12,8 @@ EOF
 }
 
 main() {
+  # only use buildbuddy in CI
+  # TODO: support buildbuddy locally
   if [[ "${NETLIFY:-}" == true && -n "${BUILDBUDDY_API_KEY:-}" ]]; then
     generate_bazelrc
   fi
