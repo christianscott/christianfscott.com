@@ -15,7 +15,7 @@ main() {
   if [[ -n "${BUILDBUDDY_API_KEY:-}" && "${NETLIFY:-}" -eq 'true' ]]; then
     generate_bazelrc
   fi
-  bazelisk build //...
+  ./bazelw build //... && cp -Lr bazel-bin/ "$1"
 }
 
-main
+main "$1"
