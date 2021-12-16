@@ -12,10 +12,19 @@ EOF
 }
 
 main() {
-  if [[ -n "${BUILDBUDDY_API_KEY:-}" && "${NETLIFY:-}" -eq 'true' ]]; then
+  if [[ "${NETLIFY:-}" == true && -n "${BUILDBUDDY_API_KEY:-}" ]]; then
     generate_bazelrc
   fi
-  ./bazelw build //... && cp -Lr bazel-bin/ "$1"
+
+  local bazel
+  if command -v bazelisk > /dev/null; then
+    bazel='bazelisk'
+  else
+    bazel='./bazelw'
+  fi
+
+  "${bazel}" build //...
+  cp -Lr bazel-bin/ "$1"
 }
 
 main "$1"
