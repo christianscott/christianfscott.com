@@ -71,3 +71,13 @@ def index_page():
         ]),
     )
 
+def rss_feed():
+    posts = native.glob(["posts/**/index.md"])
+    metadata = [":{post}-metadata".format(post=paths.basename(paths.dirname(post))) for post in posts]
+
+    native.genrule(
+        name = "rss",
+        srcs = metadata + ["generate_rss.sh"],
+        outs = ["index.xml"],
+        cmd = "./generate_rss.sh $@",
+    )
