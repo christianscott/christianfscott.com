@@ -27,10 +27,6 @@ main() {
 
   "${bazel}" build //...
   cp -Lr bazel-bin/ "$1"
-
-  if [[ "${NETLIFY:-}" == 'true' ]]; then
-    "${bazel}" shutdown
-  fi
 }
 
 main "$1"
