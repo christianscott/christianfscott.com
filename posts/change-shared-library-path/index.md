@@ -3,9 +3,9 @@ title: Changing Shared Library Paths on MacOS
 date: "2023-03-14T12:48:43.276Z"
 ---
 
-Today I wanted to test the performance of a commit that recently landed in `libuv`. I did not want to wait for a new `libuv` release, a NodeJS release, or to have to wrangle a NodeJS upgrade. Instead, I wanted to test the performance of the new `libuv` version with the version of NodeJS that I'm already using. I also did not want to have to compile NodeJS from scratch: I have done this before and it took an ungodly amount of time.
+Today I wanted to test the performance of [a commit that recently landed in `libuv`](https://github.com/libuv/libuv/commit/d4eb276eea7cb19a888fe97d7759d97c7092ad02). I did not want to wait for a new `libuv` release, a NodeJS release, or to have to wrangle a NodeJS upgrade. Instead, I wanted to test the performance of the new `libuv` commit with the version of NodeJS that I'm already using. I also did not want to have to compile NodeJS from scratch: I have done this before and it took an ungodly amount of time.
 
-Luckily, NodeJS is dynamically linked against `libuv`. This means that `libuv` is not "baked into" the NodeJS executable at compile time, and is loaded at runtime. This means that it should be possible to change the version that's resolved at runtime. Before attempting this, I had a vague impression that I could achieve this by changing a lookup path similar to `$PATH` (`$LD_LOOKUP_PATH`?) but that does not appear to be the case on MacOS. From what I can tell, shared libraries are referenced via *absolute paths*, not "relative" library names. You can see the shared libraries a binary uses via `otool -L`, for example:
+Luckily, NodeJS is dynamically linked against `libuv`. This means that `libuv` is not "baked into" the NodeJS executable at compile time, and is loaded at runtime. This means that it should be possible to change the version that's resolved at runtime. Before attempting this, I had a vague impression that I could achieve this by changing a lookup path (`$LD_LOOKUP_PATH`?) but that does not appear to be the case on MacOS. From what I can tell, shared libraries are referenced via *absolute paths*, not "relative" library names. You can see the shared libraries a binary uses via `otool -L`, for example:
 
 ```
 # otool -L /usr/bin/grep
@@ -21,7 +21,7 @@ Luckily, NodeJS is dynamically linked against `libuv`. This means that `libuv` i
         /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1319.0.0)
 ```
 
-These are called "install names", and seem to be baked into the executable at link time. This implies that it's expected that the path to shared libraries will the same across systems, which surprised me. Apparently it's possible to have relative install names, but I was not able to find an executable using one on my system.
+These are called "install names", and seem to be baked into the executable at link time. Since they are absolute, it implies that it's expected that these paths will be the same across systems, which surprised me. [Apparently it's possible to have relative install names](https://medium.com/@donblas/fun-with-rpath-otool-and-install-name-tool-e3e41ae86172), but I was not able to find an executable using one on my system.
 
 To change the path to a shared library used by an executable on MacOS, these are the steps that worked for me:
 
