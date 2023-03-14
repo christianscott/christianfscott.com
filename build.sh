@@ -29,7 +29,7 @@ main() {
   cp -Lr bazel-bin/ "$1"
 
   if [[ "${NETLIFY:-}" == 'true' ]]; then
-    bazel shutdown
+    "${bazel}" shutdown
   fi
 }
 
