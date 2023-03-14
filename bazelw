@@ -5,7 +5,7 @@ set -euo pipefail
 read -r bazel_version<.bazelversion
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     readonly bazel_platform="linux"
-    readonly bazel_version_sha="1a4f3a3ce292307bceeb44f459883859c793436d564b95319aacb8af1f20557c"
+    readonly bazel_version_sha="6c25a6d716545d6b672ec46f770521cd9ebb63d73617b8f4e6747825d1db1839"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     readonly bazel_platform="darwin"
     readonly bazel_version_sha="74d93848f0c9d592e341e48341c53c87e3cb304a54a2a1ee9cff3df422f0b23c"
