@@ -104,10 +104,15 @@
     <meta property="og:url" content="https://www.christianfscott.com/">
     <meta property="og:image" content="https://www.christianfscott.com/logo.png">
     <meta property="og:updated_time" content="2020-07-20T14:38:57+00:00">
-    <meta name=twitter:card content="summary_large_image">
-    <meta name=twitter:image content="https://www.christianfscott.com/logo.png">
-    <meta name=twitter:title content="Christian Scott">
-    <meta name=twitter:description content="software engineer in sydney, australia">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@christianfscott">
+    <meta name="twitter:image" content="https://www.christianfscott.com/logo.png">
+    ${ if(isindex) }
+    <meta name="twitter:title" content="Christian Scott">
+    ${ else }
+    <meta name="twitter:title" content="${title}">
+    ${ endif }
+    <meta name="twitter:description" content="software engineer in sydney, australia">
   </head>
   <body>
     <main class="content">
