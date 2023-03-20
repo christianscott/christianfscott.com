@@ -36,14 +36,18 @@
         color:blue
     }
 
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .nav-item {
-      color: unset;
+      /** color: unset; */
     }
 
     .nav-item:not(:first-child) {
       padding-left: 0.4rem;
     }
-
 
     .highlight {
         overflow-x: scroll;
@@ -97,6 +101,20 @@
         color: #fff;
         border: thin solid #333
     }
+
+    pre {
+      padding: 1rem 1.4rem;
+      max-width: 100%;
+      overflow: auto;
+      border: 1px solid black;
+      border-radius: 0.4rem;
+    }
+
+    code {
+      color: purple;
+    }
+
+    .bold { font-weight: bold; }
     </style>
     <meta property="og:title" content="Christian Scott">
     <meta property="og:description" content="software engineer in sydney, australia">
@@ -117,13 +135,18 @@
   <body>
     <main class="content">
       <nav>
-        <a href="/" class="nav-item">Christian Scott</a>
-        <a href="https://twitter.com/christianfscott" class="nav-item">twitter</a>
-        <a href="https://github.com/christianscott" class="nav-item">github</a>
-        <a href="mailto:hello@christianfscott.com" class="nav-item">email me</a>
+        <div>
+          <a href="/" class="nav-item bold">Christian Scott</a>
+        </div>
+        <div>
+          <a href="https://twitter.com/christianfscott" class="nav-item">twitter</a>
+          <a href="https://github.com/christianscott" class="nav-item">github</a>
+          <a href="mailto:hello@christianfscott.com" class="nav-item">email me</a>
+        </div>
       </nav>
 
       ${ if(isindex) }
+        <h1>Posts</h1>
       ${ else }
         <h1>${title}</h1>
       ${ endif }
