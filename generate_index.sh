@@ -8,6 +8,7 @@ gen_index_md() {
     echo "---"
     echo
 
+    local last_printed_year=''
     {
         for metadata in `find . -name metadata.json`
         do
@@ -20,12 +21,22 @@ gen_index_md() {
             post_name=$(dirname "${post_name}")
             post_name=$(basename "${post_name}")
 
-            local nice_date
-            nice_date="$(date -d "${post_date}" '+%B %Y')"
-
             echo "${post_date} <p>[${post_title}](/${post_name})</p>"
         done
-    } | sort -r | cut -f 2- -d ' '
+    } | sort -r | while read line; do
+        local post_date
+        post_date=$(cut -f 1 -d ' ' <<< $line)
+        local html
+        html=$(cut -f 2- -d ' ' <<< $line)
+
+        local post_year
+        post_year="$(date -d "${post_date}" '+%Y')"
+        if [[ "${last_printed_year}" == '' ]] || [[ "${last_printed_year}" != "${post_year}" ]]; then
+            last_printed_year="${post_year}"
+            echo "<h2>${post_year}</h2>"
+        fi
+        echo "${html}"
+    done
 }
 
 main() {
