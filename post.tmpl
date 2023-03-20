@@ -149,13 +149,12 @@
         <h1>Posts</h1>
       ${ else }
         <h1>${title}</h1>
+        <h2 class="subtitle">
+          <time datetime="${date}">
+            ${nice_date}
+          </time>
+        </h2>
       ${ endif }
-
-      <h2 class="subtitle">
-        <time datetime="${date}">
-          ${date}
-        </time>
-      </h2>
 
       ${body}
     </main>

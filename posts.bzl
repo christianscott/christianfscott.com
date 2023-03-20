@@ -23,25 +23,17 @@ def post_page(post_md):
         name = "{post}-metadata".format(post = post_name),
         srcs = [post_md, "metadata.tmpl"],
         outs = ["{post}/metadata.json".format(post = post_name)],
-        cmd = " ".join([
-            "pandoc",
-            "--template metadata.tmpl",
-            post_md,
-            "> $@",
-        ]),
+        cmd = "pandoc --template metadata.tmpl {post_md} > $@".format(post_md=post_md),
     )
 
     native.genrule(
         name = "{post}-html".format(post = post_name),
-        srcs = [post_md, "post.tmpl"],
+        srcs = [post_md, "post.tmpl", "{post}/metadata.json".format(post=post_name)],
         outs = ["{post}/index.html".format(post = post_name)],
-        cmd = " ".join([
-            "pandoc",
-            "--from markdown",
-            "--to html5",
-            "--template post.tmpl",
-            post_md,
-            "> $@",
+        cmd = "\n".join([
+            "date=$$(jq -r .date $(location :{post}/metadata.json))".format(post=post_name),
+            "nice_date=$$(date -d $$date '+%B %Y')",
+            "pandoc --from markdown --to html5 --variable=nice_date=\"$$nice_date\" --template post.tmpl {post_md} > $@".format(post_md=post_md),
         ]),
     )
 

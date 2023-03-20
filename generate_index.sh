@@ -20,6 +20,9 @@ gen_index_md() {
             post_name=$(dirname "${post_name}")
             post_name=$(basename "${post_name}")
 
+            local nice_date
+            nice_date="$(date -d "${post_date}" '+%B %Y')"
+
             echo "${post_date} <p>[${post_title}](/${post_name})</p>"
         done
     } | sort -r | cut -f 2- -d ' '
