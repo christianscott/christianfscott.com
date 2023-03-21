@@ -22,7 +22,7 @@ The highlights:
 
 I ran almost all of my runs at a relatively low heart rate, usually at the upper limit of what my Apple Watch considers “Zone 2” (see next section for more on this). For a 5km run, my pace in this zone has improved from [~7min/km](https://www.strava.com/activities/8340433679) to just under [6min/km](https://www.strava.com/activities/8639718856/overview).
 
-![](./pace.png)
+<iframe width="100%" height="476" frameborder="0" src="https://observablehq.com/embed/8f7e6b39678b1be2@137?cells=pace"></iframe>
 
 My 5km PB improved too. My best time before this program was [28:34 at a local parkrun](https://www.strava.com/activities/8199218545). Towards the end of the program, [I ran 5km in 25:38](https://www.strava.com/activities/8662133611), which is a much larger improvement than I was expecting to see. That’s a pace improvement from 5:46min/km to 5:07min/km.
 
@@ -34,7 +34,7 @@ This is a huge ROI for what was a very small investment every week: ~2hr per wee
 ## Adherence
 I’m quite happy with my adherence. I was meant to run 213.9km over 12 weeks and ended up running 257.07km. The graph compares my planned weekly distance against the actual KMs logged:
 
-![](./kms.png)
+<iframe width="100%" height="514" frameborder="0" src="https://observablehq.com/embed/8f7e6b39678b1be2@134?cells=avp"></iframe>
 
 In the early weeks I overdid it. At the time some friends were going for long trail runs on the weekend. I don’t regret joining them, but I think it would have been sensible to take a little bit of mileage out during the week, or at least replace it with a different sport like swimming or cycling. I was lucky not to get injured.
 
