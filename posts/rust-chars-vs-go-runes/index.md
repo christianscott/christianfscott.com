@@ -19,13 +19,13 @@ This is actually a real encoding, called UTF-32. The downside of this encoding i
 
 The most popular is UTF-8, which you have probably heard of. It uses between 1 and 4 bytes to represent any of the unicode code points. For UTF-8, the code unit is a single byte. Most text on the web is encoded using UTF-8. Upon encountering a byte, you can tell how many more bytes you’ll need to process to get your whole code point by seeing what range it’s in:
 
-{{< figure src="utf-8.png" caption="*UTF-8 bytes, from https://en.wikipedia.org/wiki/UTF-8*" >}}
+![UTF-8 bytes, from https://en.wikipedia.org/wiki/UTF-8](./utf-8.png)
 
 Another popular encoding is UTF-16, which uses two bytes as its code unit. Most code points can be encoded using a single code unit, but there are some that require two code units.
 
 The code points that can be encoding using a single code unit lie in a range called the *Basic Multilingual Plane (BMP).*[^3] This includes all code points in the range 0 to 0xFFFF. Code points outside of this range are the ones encoded with two code units.
 
-{{< figure src="bmp.png" caption="*Basic Multilingual Plane, from https://en.wikipedia.org/wiki/UTF-16*" >}}
+![*Basic Multilingual Plane, from https://en.wikipedia.org/wiki/UTF-16*](./bmp.png)
 
 The two units used to represent a single code point are called a *surrogate pair.*[^4] The first unit in the pair is called the *high surrogate,* and the second unit is called the *low surrogate.* There is some well-defined transformation to get from a code point to a surrogate pair but the details of that transformation are not important for our purposes.
 
