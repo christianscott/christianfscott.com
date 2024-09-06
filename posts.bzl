@@ -28,7 +28,7 @@ def post_page(post_md):
 
     native.genrule(
         name = "{post}-html".format(post = post_name),
-        srcs = [post_md, "post.tmpl", "haddock.theme", "{post}/metadata.json".format(post=post_name)],
+        srcs = [post_md, "post.tmpl", "{post}/metadata.json".format(post=post_name)],
         outs = ["{post}/index.html".format(post = post_name)],
         cmd = "\n".join([
             "date=$$(jq -r .date $(location :{post}/metadata.json))".format(post=post_name),
