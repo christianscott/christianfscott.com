@@ -1,3 +1,5 @@
 [build]
   command = "./build.sh out/build/"
   publish = "out/build/"
+[build.processing]
+  skip_processing = true

@@ -10,18 +10,24 @@ gen_index_md() {
 
     local last_printed_year=''
     {
-        for metadata in `find . -name metadata.json`
+        for metadata in `find . -name '*.json'`
         do
             local post_title
             local post_date
+            local post_url
             post_title=$(jq -r .title "${metadata}")
             post_date=$(jq -r .date "${metadata}")
+            post_url=$(jq -r '.url // ""' "${metadata}")
 
             local post_name="${metadata}"
             post_name=$(dirname "${post_name}")
             post_name=$(basename "${post_name}")
 
-            echo "${post_date} <p>[${post_title}](/${post_name})</p>"
+            if [[ -z "${post_url}" ]]; then
+                echo "${post_date} <p>[${post_title}](/${post_name})</p>"
+            else
+                echo "${post_date} <p>[↗ ${post_title}](${post_url})</p>"
+            fi
         done
     } | sort -r | while read line; do
         local post_date
