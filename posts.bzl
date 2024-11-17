@@ -37,14 +37,15 @@ def post_page(post_md):
         ]),
     )
 
-
 def index_page():
-    posts = native.glob(["posts/**/index.md"])
-    metadata = [":{post}-metadata".format(post=paths.basename(paths.dirname(post))) for post in posts]
+    metadata = [
+        ":{post}-metadata".format(post=paths.basename(paths.dirname(post)))
+        for post in native.glob(["posts/**/index.md"])
+    ]
 
     native.genrule(
         name = "index-md",
-        srcs = metadata + ["generate_index.sh"],
+        srcs = metadata + native.glob(["links/*.json"]) + ["generate_index.sh"],
         outs = ["index.md"],
         cmd = "./generate_index.sh $@",
     )
