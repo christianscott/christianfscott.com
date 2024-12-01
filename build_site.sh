@@ -78,7 +78,7 @@ generate_index_html() {
     local tmpdir="${2}"
 
     # copy all link/*.json files to $tmpdir
-    cp -r link/*.json "${tmpdir}"
+    cp -r links/*.json "${tmpdir}"
 
     local index_md="${tmpdir}/index.md"
     _print_index_md "${tmpdir}" > "${index_md}"
