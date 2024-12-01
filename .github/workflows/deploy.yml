@@ -22,3 +22,5 @@ jobs:
         with:
           command: pages deploy out/ --project-name=christianfscott-dot-com
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
