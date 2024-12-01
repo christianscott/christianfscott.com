@@ -1,0 +1,25 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: facebook/install-dotslash@latest
+      - name: Build Site
+        run: ./build_site.sh -o out/
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          command: pages deploy out/ --project-name=christianfscott-dot-com
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

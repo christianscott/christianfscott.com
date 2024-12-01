@@ -1,0 +1,19 @@
+#!/usr/bin/env dotslash
+
+{
+  "name": "pandoc-3.5",
+  "platforms": {
+    "linux-x86_64": {
+      "size": 32371117,
+      "hash": "blake3",
+      "digest": "fa303fcf3c60175c0e19a3232062f7d75ad71dbc947151c920976f5dc1aad03f",
+      "format": "tar.gz",
+      "path": "pandoc-3.5/bin/pandoc",
+      "providers": [
+        {
+          "url": "https://github.com/jgm/pandoc/releases/download/3.5/pandoc-3.5-linux-amd64.tar.gz"
+        }
+      ]
+    }
+  }
+}
