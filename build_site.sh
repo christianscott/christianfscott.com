@@ -24,7 +24,7 @@ main() {
     local tmpdir
     tmpdir=$(mktemp -d)
 
-    for post in $(find posts/ -name index.md -type f); do
+    for post in $(find posts -name index.md -type f); do
         log "building post ./${post}"
         generate_post_html "${post}" "${outdir}" "${tmpdir}"
     done
@@ -63,7 +63,7 @@ generate_post_html() {
     # create post html
     local post_date=$(jq -r '.date' "${post_metadata}")
     local nice_date
-    nice_date=$(date -d "${post_date}" '+%B %Y')
+    nice_date=$(date -j -f '%Y-%m-%d' "${post_date}" '+%B %Y')
     ./bin/pandoc \
         --from markdown \
         --to html5 \
@@ -126,7 +126,7 @@ _print_index_md() {
         html=$(cut -f 2- -d ' ' <<< $line)
 
         local post_year
-        post_year="$(date -d "${post_date}" '+%Y')"
+        post_year="$(date -j -f '%Y-%m-%d' "${post_date}" '+%Y')"
         if [[ "${last_printed_year}" == '' ]] || [[ "${last_printed_year}" != "${post_year}" ]]; then
             last_printed_year="${post_year}"
             echo "<h2>${post_year}</h2>"

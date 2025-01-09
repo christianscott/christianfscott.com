@@ -1,6 +1,6 @@
 ---
 title: Estimating the answer to a hard puzzle
-date: "2020-02-03T15:22:58.205Z"
+date: "2020-02-03"
 ---
 
 Some coworkers and I were having a crack at the following puzzle a few weeks ago:

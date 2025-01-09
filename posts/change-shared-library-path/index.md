@@ -1,6 +1,6 @@
 ---
 title: Changing Shared Library Paths on MacOS
-date: "2023-03-14T12:48:43.276Z"
+date: "2023-03-14"
 ---
 
 Today I wanted to test the performance of [a commit that recently landed in `libuv`](https://github.com/libuv/libuv/commit/d4eb276eea7cb19a888fe97d7759d97c7092ad02). I did not want to wait for a new `libuv` release, a NodeJS release, or to have to wrangle a NodeJS upgrade. Instead, I wanted to test the performance of the new `libuv` commit with the version of NodeJS that I'm already using. I also did not want to have to compile NodeJS from scratch: I have done this before and it took an ungodly amount of time.

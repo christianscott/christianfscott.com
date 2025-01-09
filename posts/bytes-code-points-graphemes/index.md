@@ -1,6 +1,6 @@
 ---
 title: Bytes, Code Points and Grapheme Clusters
-date: "2019-04-29T11:45:54.315Z"
+date: "2019-04-29"
 ---
 
 Let's talk about text. Specifically, text encoded using utf8.

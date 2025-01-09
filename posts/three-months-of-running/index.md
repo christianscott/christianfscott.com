@@ -1,6 +1,6 @@
 ---
 title: How much did my running fitness improve after following a program for 3 months?
-date: "2023-03-21T10:31:27.693Z"
+date: "2023-03-21"
 ---
 
 Towards the end of last year I was struggling with knee injuries as a result of consistently overtraining. A friend recommended [Hal Higdon’s Novice Base Training program](https://www.halhigdon.com/training-programs/base-training/novice-base-training/) since it had helped her overcome a similar problem.

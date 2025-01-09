@@ -1,6 +1,6 @@
 ---
 title: An Extremely Basic Guide to Writing PDFs by Hand
-date: "2019-03-09T22:12:03.284Z"
+date: "2019-03-09"
 ---
 
 The goal of this post is to teach you how to write a very basic PDF containing some shapes and some text. The goal is not to teach you how PDFs work in any level of detail - I'm certainly not the person to be teaching you that & it's been done well by people before me.

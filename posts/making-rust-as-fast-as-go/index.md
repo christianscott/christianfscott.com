@@ -1,6 +1,6 @@
 ---
 title: Making rust as fast as go
-date: "2020-05-03T07:28:52.529Z"
+date: "2020-05-03"
 ---
 
 _**Update:** as some keen HN commenters have pointed out, it looks like the rust program is not actually equivalent to the go program. The go program parses the string once, while the rust program parses it repeatedly inside every loop. It's quite late in Sydney as I write this so I'm not up for a fix right now, but this post is probably Fake News. The perf gains from jemalloc are real, but it's likely not the allocators fault._

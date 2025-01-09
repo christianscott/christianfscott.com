@@ -1,6 +1,6 @@
 ---
 title: Garbage Collection Hook in Python
-date: "2019-04-29T11:45:54.315Z"
+date: "2019-04-29"
 ---
 
 Credit to Jake VanderPlas for triggering this discovery with [this tweet](https://twitter.com/jakevdp/status/1120898594519650304).

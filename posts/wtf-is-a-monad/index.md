@@ -1,6 +1,6 @@
 ---
 title: Breaking down "A monad is just a monoid in the category of endofunctors"
-date: "2019-03-11T22:12:03.284Z"
+date: "2019-03-11"
 ---
 
 ## "...just a monoid..."

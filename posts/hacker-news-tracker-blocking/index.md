@@ -1,6 +1,6 @@
 ---
 title: "What percentage of hacker news readers block trackers?"
-date: 2020-05-04T11:04:43.653Z
+date: 2020-05-04
 ---
 
 Last night I submitted a post of mine to Hacker News called [“Making rust as fast as go”](https://news.ycombinator.com/item?id=23058147). It was rather popular – I’m not sure what the highest position it got to was, but I saw it hit at least the number 3 spot.

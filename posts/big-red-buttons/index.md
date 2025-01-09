@@ -1,6 +1,6 @@
 ---
 title: Big Red Buttons
-date: "2019-12-08T21:33:03.284Z"
+date: "2019-12-08"
 ---
 
 A lot of "good advice" that's easy to internalise is also easy to ignore. A classic example of this is *"correlation does not imply causation"*. Every nerd worth their salt knows this, but falls victim to it all the time. This [bloomberg article is a classic example.](https://www.bloomberg.com/news/articles/2019-07-03/move-when-you-are-young-to-boost-your-salary-most-chart) It claims that moving overseas when you're young boosts your salary. Young people who have moved overseas may have higher salaries, but there's no reason to believe that the moving *caused* their salaries to be higher.

@@ -1,6 +1,6 @@
 ---
 title: "A rule of thumb for explaining a new technology: explain it in terms of what it replaced"
-date: "2023-03-28T05:10:25.934Z"
+date: "2023-03-28"
 ---
 
 Listing features, benefits, and implementation details is an ineffective way of getting someone to understand the significance of a technology. People will understand what these benefits are, and will be able to see that they are desirable, but they’re not going to understand why the technology needs to exist.

@@ -1,6 +1,6 @@
 ---
 title: Is mobx magic?
-date: "2020-05-02T08:26:05.556Z"
+date: "2020-05-02"
 ---
 
 When I was first introduced to mobx about a year and half ago, you probably could have convinced me that it was magic. The idea that my react components knew how to update when I mutated properties on an object was bizarre. Since then, I’ve been introduced to a few techniques and javascript features that made it click. I don’t know how mobx actually works, but I can now see how it’s possible.

@@ -1,6 +1,6 @@
 ---
 title: What’s the difference between a Rust char and a Go rune?
-date: "2020-05-10T05:44:50.426Z"
+date: "2020-05-10"
 ---
 
 Rust and Go have similar ways of dealing with UTF-8 encoded text. Rust gives you the `.chars()` method on strings, which returns a sequence of `char`s (no surprise). Go on the other hand gives you `[]rune(str)`, which returns a slice of `rune`s. What's the difference between these two things?

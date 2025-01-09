@@ -1,6 +1,6 @@
 ---
 title: Avoiding race conditions in JS
-date: "2019-05-17T07:40:03.338Z"
+date: "2019-05-17"
 ---
 
 Race conditions?! Javascript?! It's a real thing, I promise!

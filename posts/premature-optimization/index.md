@@ -1,6 +1,6 @@
 ---
 title: Premature optimization is about delaying solving problems, not about performance
-date: "2020-07-20T14:38:57.344Z"
+date: "2020-07-20"
 ---
 
 > Premature optimization is the root of all evil - Donald Knuth

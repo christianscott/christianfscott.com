@@ -1,6 +1,6 @@
 ---
 title: "Bazel remote caching: Action caches are more secure when they're readonly"
-date: "2024-09-05T23:13:13.625Z"
+date: "2024-09-05"
 ---
 
 Bazel remote caches are made up of two parts: the Action Cache _(AC)_ and the Content Addressable Store _(CAS)_. The AC stores the results of previous builds and tests, and the CAS is basically a file store. To prevent certain types of attacks, it’s important for the AC to be readonly. It’s not necessary for the CAS to be readonly, however, assuming certain checks are in place. Making the AC readonly forces you to change the way you run your builds, so you’ll need to decide if the tradeoff is worth it.
