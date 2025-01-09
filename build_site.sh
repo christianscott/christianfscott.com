@@ -63,7 +63,7 @@ generate_post_html() {
     # create post html
     local post_date=$(jq -r '.date' "${post_metadata}")
     local nice_date
-    nice_date=$(date -j -f '%Y-%m-%d' "${post_date}" '+%B %Y')
+    nice_date=$(reformat_date "${post_date}" '+%B %Y')
     ./bin/pandoc \
         --from markdown \
         --to html5 \
@@ -126,7 +126,7 @@ _print_index_md() {
         html=$(cut -f 2- -d ' ' <<< $line)
 
         local post_year
-        post_year="$(date -j -f '%Y-%m-%d' "${post_date}" '+%Y')"
+        post_year="$(reformat_date "${post_date}" '+%Y')"
         if [[ "${last_printed_year}" == '' ]] || [[ "${last_printed_year}" != "${post_year}" ]]; then
             last_printed_year="${post_year}"
             echo "<h2>${post_year}</h2>"
@@ -188,6 +188,18 @@ usage() {
 
 log() {
     echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $*" >&2
+}
+
+# Reprints a date using a different format
+reformat_date() {
+  local date="$1"
+  local format="$2"
+  # use -f -j on macos
+  if [[ $(uname) == "Darwin" ]]; then
+    date -j -f '%Y-%m-%d' "$date" "$format"
+  else
+    date -d "$date" "$format"
+  fi
 }
 
 main "$@"
