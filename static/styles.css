@@ -12,13 +12,11 @@ pre {
 
 pre code {
     padding: 0;
-    overflow: visible;
     overflow-wrap: normal;
 }
 
 .sourceCode {
     background-color: transparent;
-    overflow: visible;
 }
 
 pre>code.sourceCode {
@@ -33,10 +31,6 @@ pre>code.sourceCode>span {
 
 pre>code.sourceCode>span:empty {
     height: 1.2em;
-}
-
-.sourceCode {
-    overflow: visible;
 }
 
 code.sourceCode>span {
