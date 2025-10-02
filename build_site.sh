@@ -57,7 +57,7 @@ generate_post_html() {
     done
 
     # create post metadata json
-    local post_metadata="${tmpdir}/${post_name}_metadata.json"
+    local post_metadata="${tmpdir}/${post_name}.json"
     ./bin/pandoc --template metadata.tmpl "${post}" > "${post_metadata}"
 
     # create post html
@@ -153,7 +153,7 @@ _print_rss_xml() {
 EOF
 
     {
-        for metadata in $(find "${tmpdir}" -name '*_metadata.json')
+        for metadata in $(find "${tmpdir}" -name '*.json')
         do
             local post_title
             local post_date
@@ -161,8 +161,7 @@ EOF
             post_date=$(./bin/jq -r .date "${metadata}")
 
             local post_name="${metadata}"
-            post_name=$(dirname "${post_name}")
-            post_name=$(basename "${post_name}")
+            post_name=$(basename "${post_name}" '.json')
 
             cat <<EOF
   <item>
