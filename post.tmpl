@@ -22,6 +22,9 @@
     <meta name="twitter:title" content="${title}">
     ${ endif }
     <meta name="twitter:description" content="software engineer in sydney, australia">
+    ${ if(draft) }
+    <meta name="robots" content="noindex">
+    ${ endif }
   </head>
   <body>
     <main class="content">

@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: facebook/install-dotslash@latest
       - name: Build Site
-        run: ./build_site.sh -o out/
+        run: ./build_site.py -o out/
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
