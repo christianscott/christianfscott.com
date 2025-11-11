@@ -1,0 +1,14 @@
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>#x-christian</title>
+  <link>https://www.christianfscott.com</link>
+  <item>
+    <title>testing 123</title>
+    <description>hello world</description>
+    <guid isPermaLink="false">urn:uuid:6c1c2c7a-5b9a-4c2a-bf2b-ff6a0f2a7c41</guid>
+    <pubDate>Tue, 11 Nov 2025 02:10:00 GMT</pubDate>
+  </item>
+</channel>
+</rss>
